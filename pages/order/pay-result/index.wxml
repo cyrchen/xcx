@@ -1,0 +1,16 @@
+
+
+<view class="page-container" >
+    <view class="icon" >
+      <icon type="success" size="200rpx" />
+    </view>
+    <view class="page_title" >支付成功</view> 
+     <view class="page_tip" >恭喜您成为我们的高端会员</view> 
+     <view class="page_butns" >
+       <button class="clear_butn main_butn"
+       data-page="order-detail" bindtap="toLinkUrl">查看订单</button>
+       <button class="clear_butn sub_butn" 
+       data-page="main"  bindtap="toLinkUrl">返回首页</button>
+     </view> 
+</view>
+  

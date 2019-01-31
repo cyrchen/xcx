@@ -1,0 +1,39 @@
+
+
+<view class="page-container" hover-class="none" hover-stop-propagation="false">
+  <view class="page-header" hover-class="none" hover-stop-propagation="false">
+    <view class="icon">
+      <image src="http://pic1.sc.chinaz.com/Files/pic/pic9/201901/zzpic16232_s.jpg" mode="aspectFill" lazy-load="false" binderror="" bindload="" />
+    </view>
+    <view class="name">达芬奇</view>
+  </view>
+
+  <view class="cell-group" hover-class="none" hover-stop-propagation="false">
+    <custom-cell 
+    icon="/assets/images/my/my-box.png" 
+    borderType='bottom'
+    linkUrl="/pages/box/box/index"
+    title="我的采集盒"></custom-cell>
+    <custom-cell 
+    icon="/assets/images/my/my-order.png" 
+    borderType='bottom'
+    linkUrl="/pages/order/order/index"
+    title="我的订单"></custom-cell>
+    <custom-cell 
+    icon="/assets/images/my/my-address.png" 
+    borderType='bottom'
+    linkUrl="/pages/mine/address/index"
+    title="地址管理"></custom-cell>
+    <custom-cell 
+    icon="/assets/images/my/my-ticket.png" 
+    borderType='bottom'
+    linkUrl="/pages/mine/discount/index"
+    title="我的优惠券"></custom-cell>
+    <custom-cell 
+    icon="/assets/images/my/my-content.png" 
+    linkUrl="/pages/mine/contact/index"
+    title="联系我们"></custom-cell>
+  </view>
+    
+</view>
+  

@@ -1,0 +1,130 @@
+
+
+<view class="page-container" hover-class="none" hover-stop-propagation="false">
+  
+  <!-- page-header -->
+  <view class="page-header">
+    <view class="main_text" >
+      <view class="title" >语言智能能力</view>
+      <view class="content" >是指有效地运用口头语言或文字表达自己的思想并理解他人，灵活掌握语音、语义、语法，具备阅读写作、用言语思维、用言语表达和欣赏语言深层次内涵等方面的能力。</view>
+    </view>
+    <view class="comprehensive_evaluation">
+      <view class="image_container" >
+        <image src="/assets/images/report/report-card-bg2.png"></image>
+      </view>
+      <view class="evaluation_container">
+        <view class="left">
+          <view class="title">总体评价</view>
+          <view class="content">
+              您的孩子在语言智能方面的先天潜能<text>出类拔萃</text> 
+          </view>
+        </view>
+        <view class="right">
+          <image src="/assets/images/report/score_3.png"></image>
+        </view>  
+      </view>
+    </view>
+  </view>
+
+  <!-- 代表人物 -->
+
+  <view class="card_item figure_card">
+    <view class="title">代表人物</view>
+    <view class="content">
+      <view class="figure_container">
+        <view class="figure_item">
+          <view class="icon">
+            <image src=""></image>
+          </view>
+          <view class="name">莎士比亚</view>
+        </view>
+        <view class="figure_item">
+          <view class="icon">
+            <image src=""></image>
+          </view>
+          <view class="name">莎士比亚</view>
+        </view>
+        <view class="figure_item">
+          <view class="icon">
+            <image src=""></image>
+          </view>
+          <view class="name">莎士比亚</view>
+        </view>
+      </view>
+      <view class="sub_title">优势职业方向</view>  
+      <view class="sub_content">作家、演说家、记者、编辑、主持人、播音员、律师</view>  
+
+    </view>
+  </view>
+    
+
+  <!-- 检测基因 -->
+
+  <view class="card_item gene">
+    <view class="title">检测基因</view>
+    <view class="content">
+      <view class="gene_item" wx:for="123">
+        <view class="gene_header">
+          <view class="icon">
+            <image src=""></image>
+          </view>
+          <view class="name">基因1</view>
+        </view>
+        <view class="gene_derection">
+          该基因位于7号染色体上，此基因在胚胎发育过程中，是大脑语言和语言区域正常发育所必需的，并且可能参与各种可能最终影响语言发育的生物学途径和级联反应。这种基因的突变可导致言语语言障碍。
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 培养建议 -->
+  <view class="card_item suggest">
+    <view class="title">培养建议</view>
+    <view class="content">
+      <view class="suggest_item" wx:for="123">
+        <view class="suggest_header">
+          <view class="image_container" >
+            <image src="/assets/images/report/report-card-bg1.png"></image>
+          </view>
+          <view class="title_container">
+            <view >
+              语言的发展最好尊重每个孩子独特的时间
+            </view>
+          </view>
+        </view>
+        <view class="suggest_body">
+          <view class="body_item">
+            <view class="left">
+              <image src="/assets/images/report/number_1.png"></image>
+            </view>
+            <view class="right">
+              孩子在未学语言前是用图像与情景思维的，言语是抽象概念，两者正确的识别需要近1年的时间过渡。2岁是孩子语言突飞猛进发展的时候，到3岁基本可以掌握最常用的简单言语。
+            </view>
+          </view>
+          <view class="body_item">
+            <view class="left">
+              <image src="/assets/images/report/number_2.png"></image>
+            </view>
+            <view class="right">
+              孩子在未学语言前是用图像与情景思维的，言语是抽象概念，两者正确的识别需要近1年的时间过渡。2岁是孩子语言突飞猛进发展的时候，到3岁基本可以掌握最常用的简单言语。
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="pageing">
+    <view class="pre_page" >
+      上一页
+    </view>
+    <view class="next_page" >
+      下一页
+    </view>
+      
+  </view>
+    
+
+</view>
+  

@@ -1,0 +1,12 @@
+
+var replace = function (phone) {
+  if(!phone)return ''
+  if (typeof phone == 'number') {
+    phone = phone.toString();
+  }
+  return phone.substring(0, 3) + '****' + phone.substring(7, 11);
+}
+
+module.exports = {
+  replace: replace
+};

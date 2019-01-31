@@ -1,0 +1,48 @@
+<!-- pages/mine/address-edit/index.wxml -->
+<view class="form_inputs_container">
+  <view class="cell">
+    <view class="title">收件人：</view>
+    <view class="value">
+      <input value="{{addressForm.name}}" maxlength="20" placeholder-class="placeholder_text" placeholder="请输入联系人"></input>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="title">手机号：</view>
+    <view class="value">
+      <input type="number" maxlength="11" placeholder-class="placeholder_text"  placeholder="11位手机号" class="numberone"></input>
+    </view>
+  </view>
+  <view class="cell" bindtap="chooseArea">
+    <view class="title">所在城市：</view>
+    <view class="value">
+      <text class="placeholder_text">省/市/区</text>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="title">详细地址：</view>
+    <view class="value">
+      <input maxlength="30" placeholder-class="placeholder_text"  placeholder="所在详细路段" class="numberone"></input>
+    </view>
+  </view>
+</view>
+
+<view class="default_address_set" bindtap="changeAddressDefault">
+  <view class="icon" >
+    <image wx:if="{{addressForm.default}}" src="/assets/images/global/checked-circle.png"></image>
+    <image wx:else src="/assets/images/global/no-check-circle.png"></image>
+  </view>
+  <view>设为默认地址</view>
+</view>
+  
+
+<view class="butn_container">
+   <button class="clear_butn main_butn">保存</button>
+   <button class="clear_butn sub_butn" bindtap="deleteAddr">删除收货地址</button>
+
+</view>
+
+<van-popup show="{{ showPop }}" position="bottom" bind:close="onClosePop">
+  <van-area title="选择地址" area-list="{{ areaList }}"  value="{{checkedArea.detail.code}}"
+    bind:cancel="cancleArea"  bind:confirm="confirmArea" />
+</van-popup>
+<van-dialog id="van-dialog" />

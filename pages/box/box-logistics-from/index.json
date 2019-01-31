@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "van-popup": "/src/component/zan-ui/popup/index"
+  }
+}

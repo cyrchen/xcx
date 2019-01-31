@@ -1,0 +1,8 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#56A9FE",
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "custom-cell": "/src/component/custom/custom-cell/index"
+  }
+}

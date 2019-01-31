@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "van-action-sheet": "/src/component/zan-ui/action-sheet/index"
+  }
+}

@@ -1,0 +1,94 @@
+
+<view class="portrait" hover-class="none" hover-stop-propagation="false">
+  <!-- 头像开始 -->
+    <view class="portraitimg clearfix" hover-class="none" hover-stop-propagation="false">
+        <view class="headword" hover-class="none" hover-stop-propagation="false">头像:</view>
+        <view class="headwordimg" hover-class="none" hover-stop-propagation="false"><image class="headwordimg1" src="/assets/images/global/arrow-right.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+          </view>        
+    </view>
+    <!-- 头像结束 -->      
+</view>
+ <view class="xian" hover-class="none" hover-stop-propagation="false">
+   <view class="xiantu" hover-class="none" hover-stop-propagation="false"></view>
+ </view>
+    
+<view class="portrait" hover-class="none" hover-stop-propagation="false">
+   <!-- 宝宝姓名开始 -->
+     <view class="portraitimg clearfix" hover-class="none" hover-stop-propagation="false">
+         <view class="headword name" hover-class="none" hover-stop-propagation="false">姓名:</view>
+         <view class="baobaoname" hover-class="none" hover-stop-propagation="false"><input type="text" placeholder="请输入宝宝姓名"></input></view>
+                  
+    </view>
+    <!-- 宝宝姓名结束 -->   
+</view>
+ <view class="xian" hover-class="none" hover-stop-propagation="false">
+   <view class="xiantu" hover-class="none" hover-stop-propagation="false"></view>
+ </view>
+
+<view class="portrait" hover-class="none" hover-stop-propagation="false">
+  <!-- 宝宝性别开始 -->
+     <view class="portraitimg clearfix" hover-class="none" hover-stop-propagation="false">
+         <view class="headword name" hover-class="none" hover-stop-propagation="false">性别:</view>
+         <view class="baobaoname sex" hover-class="none" hover-stop-propagation="false" bindtap="showSexPop">
+            <text class="babyname" wx:if='{{!userinfoForm.babySex}}'>宝宝性别</text>
+            <text class="" wx:else >{{userinfoForm.babySex}}</text>
+         </view>              
+    </view>
+    <!-- 宝宝性别结束    -->
+</view>
+ <view class="xian" hover-class="none" hover-stop-propagation="false">
+   <view class="xiantu" hover-class="none" hover-stop-propagation="false"></view>
+ </view>
+<!-- 宝宝出生时间开始 -->
+  <view class="portrait" hover-class="none" hover-stop-propagation="false">
+   <!-- 宝宝姓名开始 -->
+     <view class="portraitimg clearfix" hover-class="none" hover-stop-propagation="false">
+         <view class="headword name" hover-class="none" hover-stop-propagation="false">出生时间:</view>
+         <view class="baobaoname baobaobore" hover-class="none" hover-stop-propagation="false"><input type="text" placeholder="请选择宝宝出生时间" bindtap="showtime"></input></view>
+                  
+    </view>
+    <!-- 宝宝姓名结束 -->   
+</view>
+  <view class="btn" hover-class="none" hover-stop-propagation="false">
+      <button class="btn-button" bindtap="toProtocolService">保存</button>
+  </view>
+    
+<!-- 宝宝出生时间结束 -->
+<!-- 宝宝性别组建 -->
+<van-popup
+  show="{{ showSex }}"
+  custom-class="custom-popup-class"
+  position="bottom"
+  overlay:true
+  bind:close="onClosePopSex"
+  close-on-click-overlay="{{true}}"
+  safe-area-inset-bottom="{{true}}" 
+>
+<van-picker
+  show-toolbar
+  columns="{{ columns }}"
+  bind:cancel="onCancel"
+  bind:confirm="onConfirm"
+/>
+</van-popup>
+<!-- 宝宝性别组建结束 -->
+
+<!-- 选择出生时间开始 -->
+<van-popup
+  show="{{ showtimesex }}"
+  custom-class="custom-popup-class"
+  position="bottom"
+  overlay:true
+  bind:close="abolish"
+  close-on-click-overlay="{{true}}"
+  safe-area-inset-bottom="{{true}}" 
+>
+<van-datetime-picker
+  type="date"
+  value="{{ currentDate }}"
+  min-date="{{ minDate }}"
+  bind:change="onChange"
+/>
+</van-popup>
+<!-- 选择出生时间结束 -->
+

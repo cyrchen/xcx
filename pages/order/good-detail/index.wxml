@@ -1,0 +1,69 @@
+
+<view class="page-contaner" hover-class="none" hover-stop-propagation="false">
+  <swiper class='good_banner'>
+    <swiper-item class='image_item' autoplay wx:for='1435'>
+      <view class='image_container'>
+        <image mode='aspectFill' src='https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=3978483811,1713620016&fm=202&mola=new&crop=v1' data-src='1' data-list='' bindtap='previewImage'></image>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class="good-infos" hover-class="none" hover-stop-propagation="false">
+    <view class="good_name" >儿童基因检测</view>
+    <view class="other_infos">
+      <view class="price">￥369</view>
+      <view class="tag_price">原价￥999</view>
+    </view>
+  </view>
+
+  <view class="good-description" >
+    <view class="header">
+      <view class="title" >商品详情</view>
+    </view>
+    <view class='good_details_images_container'>
+      <image mode='aspectFill' src='https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=3978483811,1713620016&fm=202&mola=new&crop=v1'
+        mode='widthFix' wx:for='125465'></image>
+    </view>
+  </view>
+
+
+    
+  <fixed-bottom >
+    <button class="fixed_pink_butn clear_butn" bindtap="showBuyBox">购买</button>
+  </fixed-bottom>
+
+<van-popup
+  show="{{ showBox }}"
+  position="bottom"
+  overlay="{{ true }}"
+  bind:close="choleBuyBox"
+  custom-class="buy_box_pop"
+>
+
+  <van-icon name="cross" catchtap="choleBuyBox" custom-class="close_icon" />
+  <view class='good_info_container' catchtouchmove='a'>
+    <view class='left_image_container'>
+      <image src=''  data-src='1' data-list='' bindtap='previewImage'></image>
+    </view>
+    <view class='right_info_container'>
+      <view class="other_infos">
+        <view class="price">￥369</view>
+        <view class="tag_price">原价￥999</view>
+      </view>
+      <view class='name'>儿童天赋基因检测</view>
+    </view>
+  </view>
+  
+  <view class='good_num'>
+    <view class='title'>购买数量</view>
+    <van-stepper plus-class="add" minus-class="sub" input-class="input" value="{{ 1 }}"  max="22" bind:change="getGoodNum" />
+  </view>
+  
+  <fixed-bottom >
+    <button class="fixed_pink_butn clear_butn" bindtap="toPreOrder">购买</button>
+  </fixed-bottom>
+
+</van-popup>
+
+</view>
+  

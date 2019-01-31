@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的采集盒",
+  "usingComponents": {
+    "fixed-bottom":"/src/component/custom/fixedBottom/index"
+  }
+}

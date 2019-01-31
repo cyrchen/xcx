@@ -1,0 +1,144 @@
+<view class='page-container'>
+  <!-- 地址栏 -->
+  <view class='address_choose_box'>
+    <view class='address_info' bindtap='toAddressChoose'>
+      <view class='address_left' wx:if='{{true}}'>
+        <view class='address_name'>
+          金燕
+          <text>15554655654</text>
+        </view>
+        <view class='address_sub'>上海市爱时候覅花生防护按时交话费</view>
+      </view>
+      <view class='address_none' wx:else>
+        <view class="address_icon">
+          <image src="/assets/images/order/address-add.png" />
+        </view>
+        <view class='name'>新增收货地址</view>
+      </view>
+      <van-icon name="arrow" custom-class="arrow-right" />
+    </view>
+    <view class='address_border'>
+      <image src='/assets/images/global/splitdecoration.png'></image>
+    </view>
+  </view>
+
+  <!-- 订单商品 -->
+  <view class="pre_order_goods">
+    <view class="good_item" hover-class="none" hover-stop-propagation="false">
+      <view class="good_icon">
+        <image src="/assets/images/global/good_demo.png" mode='aspectFill' />
+      </view>
+      <view class="good_infos" hover-stop-propagation="false">
+        <view class="good_name" >奥术大师发生尽快发货看见爱上个回复看见爱上发挥</view>
+        <view class="good_price" >￥999</view>
+        <view class="good_num" >x1</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单描述 -->
+  <view class="order_description" >
+    <view class="desc_item">
+      <view class="key">商品数量</view>
+      <view class="value">1</view>
+    </view>
+    <view class="desc_item">
+      <view class="key">合计金额</view>
+      <view class="value">￥999</view>
+    </view>  
+  </view>
+    
+  <!-- 订单支付方式 -->
+  <view class="order_pay_way" >
+    <view class="desc_item">
+      <view class="key">
+        <image src="/assets/images/global/wechat-pay.png" />
+        <view>微信支付</view>
+      </view>
+      <view class="value">
+        <image src="/assets/images/global/checked-circle.png" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单提醒 -->
+  <view class="order_tips">
+    <view class="tips_item" catchtap="showSevenpop">
+      <image src="/assets/images/order/number-7.png" />
+      <view>7天无理由退换货</view>
+    </view>
+    <view class="tips_item" catchtap="showInvoicepop">
+      <image src="/assets/images/order/piao.png" />
+      <view>如何开具开票？</view>
+    </view>
+    <view class="tips_item" >
+      <image catchtap="changeAgreementChecked" wx:if='{{checkedAgreement}}' src="/assets/images/global/checked.png" />
+      <image catchtap="changeAgreementChecked" wx:else src="/assets/images/global/no-checked.png" />
+      <view>同意
+        <text class="cantouch">《儿童天赋基因检测服务协议》</text>
+        <text class="cantouch" catchtap="showStatementpop">《隐私协议》</text>
+        </view>
+    </view>
+      
+  </view>
+    
+
+  <van-submit-bar disabled="{{!checkedAgreement}}" 
+  loading="{{orderButnLoading}}" 
+  price="{{ 3050 }}" 
+  button-text="提交订单" 
+  button-class="order_submit_butn"
+  custom-class="custom-class-order-submit"
+  bar-class="custom-bar-class"
+  price-class="custom-price-class"
+  bind:submit="orderSubmit" />
+</view>
+
+<van-popup 
+  show="{{ showSevenpop }}"
+  overlay="{{ true }}"
+  bind:close="closeSevenpop"
+  custom-class="popup_some_words">
+
+    <view class="popup_container" hover-class="none" hover-stop-propagation="false">
+      <view class="content">
+        <view class="title">7天无理由退换货</view>
+        <view class="popup_words">
+          <text class="words">自产品付费之日起7日内您可申请无理由退货。申请无理由退货请直接联系孕宝博士公众号获取客服帮助。 您在申请无理由退费时，必须保证</text>
+        </view>
+      </view>
+      <van-icon name="close" catchtap="closeSevenpop" custom-class="close_icon" />
+    </view>
+</van-popup>
+
+<van-popup 
+  show="{{ showInvoicepop }}"
+  overlay="{{ true }}"
+  bind:close="closeInvoicepop"
+  custom-class="popup_some_words">
+    <view class="popup_container" hover-class="none" hover-stop-propagation="false">
+      <view class="content">
+        <view class="title">如何开发票</view>
+        <view class="popup_words">
+          <text class="words">您在孕宝博士线上购买的检测服务，若需要开具发票，可以在订单页面填写发票信息。\n发票类型分为增值税普通发票和增值税专用发票。发票信</text>
+        </view>
+      </view>
+      <van-icon name="close" catchtap="closeInvoicepop" custom-class="close_icon" />
+    </view>
+</van-popup>
+
+<van-popup 
+  show="{{ showStatementpop }}"
+  overlay="{{ true }}"
+  bind:close="closeStatementpop"
+  custom-class="popup_some_words">
+    <view class="popup_container" hover-class="none" hover-stop-propagation="false">
+      <view class="content">
+        <view class="title">隐私声明</view>
+        <view class="popup_words">
+          <text class="words">您同意孕宝博士使用以下方式收集您的信息：在用户注册、填写个人基本信息及各类系统表单、使用系统功能和其他应用、在使用我们服务过程</text>
+        </view>
+      </view>
+      <van-icon name="close" catchtap="closeStatementpop" custom-class="close_icon" />
+    </view>
+</van-popup>

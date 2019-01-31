@@ -1,0 +1,45 @@
+<!-- 中间大图片开始 -->
+<view class="conteriner" hover-class="none" hover-stop-propagation="false">
+  <!-- 中间背景图 -->
+  <image class="bg-man" src="/assets/images/placard/bg-man.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+  <!-- 中间背景图结束 -->
+  <!-- 输入昵称 -->
+  <view class="nickname" hover-class="none" hover-stop-propagation="false">
+    <input type="text" placeholder="输入昵称" placeholder-class="children" class="nicknamevalue"></input>
+  </view>
+  <!-- 输入昵称结束 -->
+  <!-- 弹钢琴开始 -->
+  <view class="playqin" hover-class="none" hover-stop-propagation="false">
+      <image class="painist" src="/assets/images/placard/pianist.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+  </view>
+  <!-- 弹钢琴结束 -->
+  <!-- 选择男女开始 -->
+    <view class="choice" hover-class="none" hover-stop-propagation="false">
+        <text class="choicebao" selectable="false" space="false" decode="false">点击选择</text>
+         <text class="choicebao" selectable="false" space="false" decode="false">宝宝性别</text>
+    </view>
+      
+  <!-- 选择男女结束 -->
+  <!-- 箭头 -->
+    <view class="arrowsimages" hover-class="none" hover-stop-propagation="false">
+        <image class="arrowsimagespop" src="/assets/images/report/botton.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    </view>
+      
+  <!-- 箭头 -->
+  <!-- 男女切换 -->
+  <view class="switchover" hover-class="none" hover-stop-propagation="false">
+      <!-- 男生 -->
+      <view class="switchover-boy" hover-class="none" hover-stop-propagation="false">男生</view>
+        
+      <!-- 男生结束 -->
+      <!-- 女生 -->
+       <view class="switchover-girl" hover-class="none" hover-stop-propagation="false">女生</view>
+      <!-- 女生结束 -->
+  </view>
+    
+  <!-- 男女切换结束 -->
+  
+    
+</view>
+<!-- 中间大图片结束 -->
+

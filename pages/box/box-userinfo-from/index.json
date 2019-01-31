@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-popup": "/src/component/zan-ui/popup/index",
+    "van-picker": "/src/component/zan-ui/picker/index",
+    "van-datetime-picker": "/src/component/zan-ui/datetime-picker/index"
+  }
+}

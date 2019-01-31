@@ -1,0 +1,101 @@
+@import "util";
+
+
+/* 页面背景色 */
+@Default_page_background_color: #f5f6f7;
+
+/**
+ * 字体
+ */
+/* 字体大小 */
+@Default_page_font_larger_size: 34rpx;
+
+@Default_page_font_large_size: 32rpx;
+
+@Default_page_font_normal_size: 30rpx;
+
+@Default_page_font_small_size: 28rpx;
+
+@Default_page_font_smaller_size: 26rpx;
+
+
+
+/* 字体 - 主色 */
+@Default_page_font_main_color: #333333;
+
+/* 字体 - 副色 */
+@Default_page_font_sub_one_color: #666666;
+
+/* 字体 - 副2色 */
+@Default_page_font_sub_two_color: #999999;
+
+
+
+/* 主题颜色 */
+@Theme_main_butn_color: #56A9FE;
+@Theme_sub_butn_color: #FF6262;
+@Theme_main_font_color: #4081D7;
+@Theme_main_font_color2: #1059DF;
+
+.Theme_main_butn_color{
+  color: @Theme_main_butn_color;
+}
+.Theme_sub_butn_color{
+  background: @Theme_sub_butn_color;
+}
+.Theme_main_font_color{
+  color: @Theme_main_font_color;
+}
+.Theme_main_font_color2{
+  color: @Theme_main_font_color2;
+}
+
+.clear_butn{
+  background-color: transparent;
+  border-radius:0;
+  padding: 0;
+  margin: 0;
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  &:hover{
+    opacity: 0.9;
+  }
+  &::after{
+    border: none;
+  }
+}
+
+.clear_mini_butn{
+  background-color: transparent;
+  border-radius:0;
+  margin: 0;
+  font-size: 24rpx;
+  height: 44rpx;
+  min-width: 140rpx;
+  padding: 0 30rpx;
+  line-height: 44rpx;
+  display: inline-block;
+  &:hover{
+    opacity: 0.9;
+  }
+  &::after{
+    border: none;
+  }
+}
+
+.fixed_blue_butn{
+  background:#56A9FE;
+  border-radius: 0;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.fixed_pink_butn{
+  background-color: #FF6262;
+  border-radius: 0;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  text-align: center;
+}

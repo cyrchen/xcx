@@ -1,0 +1,10 @@
+
+<view class="page-container" >
+    <view class="advertisement-bg" >
+        <image  src="/assets/images/global/bg.png" mode="aspectFill" lazy-load="false" binderror="" bindload="" />
+    </view>
+    <view class="count-down-butn" hover-class="none" hover-stop-propagation="false" data-count='{{countDown}}'  bindtap="jumpToIndex">
+        跳过{{countDown}}s
+    </view>
+</view>
+  

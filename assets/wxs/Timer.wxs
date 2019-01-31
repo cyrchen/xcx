@@ -1,0 +1,83 @@
+var tempToDate = function (timespan) {
+  if (!timespan){
+    return
+  }
+  if (timespan.toString().length==10){
+    timespan += '000'
+  }
+  
+  timespan = Number(timespan)
+  var dateTime = getDate(timespan);
+  var year = dateTime.getFullYear();
+  var month = dateTime.getMonth() + 1 < 10 ? '0' + (dateTime.getMonth() + 1) : dateTime.getMonth() + 1;
+  var day = dateTime.getDate() < 10 ? '0' + dateTime.getDate() : dateTime.getDate();
+  var hour = dateTime.getHours() < 10 ? '0' + dateTime.getHours() : dateTime.getHours();
+  var minute = dateTime.getMinutes() < 10 ? '0' + dateTime.getMinutes() : dateTime.getMinutes();
+  var second = dateTime.getSeconds() < 10 ? '0' + dateTime.getSeconds() : dateTime.getSeconds();
+  var now = getDate();
+  var now_new = (now.getTime() );  //typescript转换写法
+  var milliseconds = 0;
+  var timeSpanStr;
+  milliseconds = now_new - timespan;
+  if (milliseconds <= 1000 * 60 * 1) {
+    
+    timeSpanStr = '刚刚';
+  }
+  else if (1000 * 60 * 1 < milliseconds && milliseconds <= 1000 * 60 * 60) {
+    timeSpanStr = Math.round((milliseconds / (1000 * 60))) + '分钟前';
+  }
+  else if (1000 * 60 * 60 * 1 < milliseconds && milliseconds <= 1000 * 60 * 60 * 24) {
+    timeSpanStr = Math.round(milliseconds / (1000 * 60 * 60)) + '小时前';
+  }
+  else if (1000 * 60 * 60 * 24 < milliseconds && milliseconds <= 1000 * 60 * 60 * 24 * 15) {
+    timeSpanStr = Math.round(milliseconds / (1000 * 60 * 60 * 24)) + '天前';
+  }
+  else if (milliseconds > 1000 * 60 * 60 * 24 * 15 && year == now.getFullYear()) {
+    timeSpanStr = month + '-' + day + ' ' + hour + ':' + minute;
+  } else {
+    timeSpanStr = year + '-' + month + '-' + day + ' ' + hour + ':' + minute;
+  }
+  return timeSpanStr;
+}
+
+var tempToDateYYMMDD = function (timespan) {
+  timespan += '000'
+  timespan = Number(timespan)
+  var dateTime = getDate(timespan);
+  var year = dateTime.getFullYear();
+  var month = dateTime.getMonth() + 1 < 10 ? '0' + (dateTime.getMonth() + 1) :  dateTime.getMonth() + 1;
+  var day = dateTime.getDate() < 10 ? '0' + dateTime.getDate() : dateTime.getDate();
+  var timeSpanStr;
+  timeSpanStr = year + '-' + month + '-' + day ;
+  return timeSpanStr;
+}
+
+var tempToDateYMDhms = function (timespan) {
+  timespan += '000'
+  timespan = Number(timespan)
+  var dateTime = getDate(timespan);
+  var year = dateTime.getFullYear();
+  var month = dateTime.getMonth() + 1 < 10 ? '0' + (dateTime.getMonth() + 1) : dateTime.getMonth() + 1;
+  var day = dateTime.getDate() < 10 ? '0' + dateTime.getDate() : dateTime.getDate();
+  var hour = dateTime.getHours() < 10 ? '0' + dateTime.getHours() : dateTime.getHours();
+  var minute = dateTime.getMinutes() < 10 ? '0' + dateTime.getMinutes() : dateTime.getMinutes();
+  var second = dateTime.getSeconds() < 10 ? '0' + dateTime.getSeconds() : dateTime.getSeconds();
+  var timeSpanStr;
+  timeSpanStr = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+  return timeSpanStr;
+}
+
+
+
+var nowTime_VS_time = function (time) {
+  /* var date = new Date(time).getTime()
+  var nowDate = new Date().getTime()
+  return nowDate > date; */
+}
+
+module.exports = {
+  tempToDate: tempToDate,
+  tempToDateYYMMDD: tempToDateYYMMDD,
+  tempToDateYMDhms: tempToDateYMDhms,
+  nowTime_VS_time: nowTime_VS_time
+};

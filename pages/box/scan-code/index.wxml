@@ -1,0 +1,16 @@
+
+
+<view class="page-container" hover-class="none" hover-stop-propagation="false">
+  <view catchtap="scan" class="scan-modal" hover-class="none" hover-stop-propagation="false">
+    <image src="/assets/images/box/scan-code-demo.png" />
+  </view>
+  <view class="input_container">
+    <view class="key" >样本编码</view>
+    <view class="value" >
+      <input type="number" maxlength="20" bindinput="getScanCodeByInput" placeholder="扫码或手动输入" value="{{scanCode}}"/>
+    </view>
+  </view>
+  <button disabled="{{scanCode.length == 0}}" bindtap="toBindUserInfo" class="clear_butn main_butn">下一步</button>
+    
+</view>
+  

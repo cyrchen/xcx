@@ -1,0 +1,55 @@
+
+<view class="page-container" > 
+  <list-none-page 
+  wx:if='{{false}}'
+  custom_container_class="custom_container_class"
+  custom_icon_class="custom_icon_class"
+  tipIcon="/assets/images/global/no-order.png" 
+  tipWord="暂无订单"
+  butnText="去购买"
+  butnLink="/pages/order/good-detail/index"
+  ></list-none-page>
+  <view wx:else class="list-page" >
+    <view class="list-container" >
+      <view wx:for='123'  class="list-item"  data-id="" bindtap="toOrderDetail">
+        <view class="header">
+          <view class="left">订单编号<text>12345312</text></view>
+          <view class="right"><text class="special">待付款</text>
+            </view>
+        </view>
+        <view class="body">
+          <view class="left"><image src=""/></view>
+          <view class="right">
+            <view class="title">
+              <view class="good_name">商品名称</view>
+              <view class="good_price">￥999</view>
+            </view>
+            <view class="good_num">x1</view>
+          </view>
+        </view>
+        <view class="footer">
+          <view class="order_infos">
+            <view class="left">交易时间<text>2018-02-22</text></view>
+            <view class="right">共<text>2</text>件 合计 <text class="price">￥399</text></view>
+          </view>
+          <view class="order_butns">
+            <view class="tips"></view>
+            <view class="butns">
+              <button catchtap="cancleOrder" class="clear_mini_butn sub-butn mini-butn">取消订单</button>
+              <button class="clear_mini_butn main-butn mini-butn">去付款</button>
+            </view>
+          </view>
+        </view>
+      </view>
+        
+    </view>
+    <view class="page_tips" >
+      如需要退换货，请 <text class="Theme_main_font_color2">联系客服</text>
+        
+    </view>
+      
+  </view>
+    
+</view>
+  
+  <van-dialog id="van-dialog" />

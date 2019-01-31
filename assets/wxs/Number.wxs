@@ -1,0 +1,21 @@
+
+
+var NumberDis=function(num){
+  num = Number(num)
+  if(num>0){
+  }
+  return num
+}
+
+var FixNum = function (num,point=0) {
+  if(!num){
+    num = 0
+  }
+  num = Number(num).toFixed(point)
+  return num
+}
+
+module.exports = {
+  NumberDis: NumberDis,
+  FixNum: FixNum
+};

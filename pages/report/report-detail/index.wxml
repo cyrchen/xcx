@@ -1,0 +1,31 @@
+
+<view class="page-container" hover-class="none" hover-stop-propagation="false">
+  
+  <view class="page-header">
+    <view class="baby_icon" hover-class="none" hover-stop-propagation="false">
+      <image src="" />
+    </view>
+    <view class="baby_info" hover-class="none" hover-stop-propagation="false">
+      <view class="name">小宝贝</view>
+      <view class="subname">唾液盒编码： 111-1111-1111</view>
+    </view>
+  </view>
+  <view class="tip1" hover-class="none" hover-stop-propagation="false">
+    实验室收到唾液盒起，约20个工作日后即可查看检测结果，节假日顺延。
+  </view>
+    
+
+  <view class="" hover-class="none" hover-stop-propagation="false">
+    <steps steps="{{reportSteps}}" activeStep="{{activeStep}}"></steps>
+  </view>
+
+  <view class="tip2">
+    生物实验本身的局限性和样本品质的问题，可能会导致实验失败，样本可能会重新检测或收集，检测结果的发布时间也会顺延。 
+  </view>
+  <view class="tip3">
+    如有任何疑问 <text data-page="contact" catchtap="toLinkPage">联系客服</text>
+      
+  </view>  
+      
+</view>
+  

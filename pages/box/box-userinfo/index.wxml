@@ -1,0 +1,121 @@
+<!-- pages/gather/personage/index.wxml -->
+<!-- 修改头像 -->
+<view class="newses" >
+  <view class="touxiang" >
+    <view class="portrait" >
+      <image class="portraitimg" src="/assets/images/my/my-contact.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+       <text class="modification" >修改头像</text>
+    </view> 
+  </view>
+ 
+</view>
+<!-- 修改头像结束 -->
+<!-- 唾液盒编码开始 -->
+<view class="solitarius clearfix" >
+  <view class="firseop" >
+    <text class="solitariustext" >唾液盒编码</text>
+  </view>
+  <view class="firseri" >
+    <input type="text" placeholder="111-11-1111" class="solitariusinput"></input>
+  </view>
+</view>
+<!-- 唾液盒编码结束 -->
+<!-- 中间一条线 -->
+<view class="thread" >
+  <view class="namepop" ></view>
+</view>
+<!-- 中间一条线 -->
+<!-- 姓名 -->
+<view class="solitarius clearfix" >
+  <view class="firseop" >
+    <text class="solitariustext" >姓名</text>
+  </view>
+  <view class="firseri" >
+    <input type="text" placeholder="小宝贝" class="solitariusinput"></input>
+  </view>
+</view>
+<!-- 姓名结束 -->
+<view class="thread" >
+  <view class="namepop" ></view>
+</view>
+<view class="thread" >
+  <view class="namepop" ></view>
+</view>
+<!-- 中间一条线 -->
+<!-- 性别 -->
+<view class="encoding" bindtap="showSexPop">
+  <view class="xian" >
+    <view class="saliva" >性别</view>
+    <view class="towards" >
+      <image class="rightdianimg" src="/assets/images/global/arrow-right.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    </view>
+    <view class="daymouse"  >
+            <text class="babyname" wx:if='{{!userinfoForm.babySex}}'>女</text>
+            <text class="" wx:else >{{userinfoForm.babySex}}</text>
+    </view>  
+  </view>
+</view>
+<!-- 性别结束 -->
+<!-- 中间的一条线 -->
+<view class="thread" >
+  <view class="namepop" ></view>
+</view>
+<!-- 中间的一条线 -->
+<view class="thread" >
+  <view class="namepop" ></view>
+</view>
+<!-- 中间的一条线 -->
+<!-- 出生年月日 -->
+<view class="encoding clearfix"  bindtap="showtime">
+  <view class="xian" >
+    <view class="saliva" >出生年月</view>
+    <view class="towards" >
+      <image class="rightdianimg" src="/assets/images/global/arrow-right.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    </view>
+    <view class="daymouse" >
+      2019-12-11
+    </view>
+  </view>
+</view>
+
+
+<fixed-bottom >
+    <button class="fixed_blue_butn clear_butn" bindtap="toAddressPage">查看检测报告</button>
+</fixed-bottom>
+
+<!-- 宝宝性别组建 -->
+<van-popup
+  show="{{ showSex }}"
+  custom-class="custom-popup-class"
+  position="bottom"
+  overlay:true
+  bind:close="onClosePopSex"
+  close-on-click-overlay="{{true}}"
+  safe-area-inset-bottom="{{true}}" 
+>
+<van-picker
+  show-toolbar
+  columns="{{ columns }}"
+  bind:cancel="onCancel"
+  bind:confirm="onConfirm"
+/>
+</van-popup>
+<!-- 宝宝性别组建结束 -->
+<!-- 选择日期开始 -->
+<van-popup
+  show="{{ showtimesex }}"
+  custom-class="custom-popup-class"
+  position="bottom"
+  overlay:true
+  bind:close="abolish"
+  close-on-click-overlay="{{true}}"
+  safe-area-inset-bottom="{{true}}" 
+>
+<van-datetime-picker
+  type="date"
+  value="{{ currentDate }}"
+  min-date="{{ minDate }}"
+  bind:confirm="onDateChange"
+/>
+</van-popup>
+<!-- 选择日期结束 -->

@@ -1,0 +1,60 @@
+
+
+<view class="page-container" hover-class="none" hover-stop-propagation="false">
+  
+  <view class="logists_infos">
+    <view class="name">顺丰快递</view> 
+    <view class="number">订单编号：1110130332</view>
+  </view>
+
+  <view class="logists_card" hover-class="none" hover-stop-propagation="false">
+    <view class="header">
+      <view class="name">运输中</view>
+      <view class="subname">预计一天后送达</view>
+    </view>
+    <view class="progress_bus">
+      
+      <view class="progress_container">
+        <view class="bar_car_container">
+          <view class="bar_car" >
+            <image src="/assets/images/order/logistics.png"></image>
+          </view>
+          <view class="bar_test">运输中</view>
+        </view>
+          
+        
+
+        <view class="left_point"></view>
+        <van-progress
+          pivot-text="0"
+          color="#FF6262"
+          text-color="#FF6262"
+          percentage="45"
+          custom-class="custom-bar"
+        />
+        <view class="right_point"></view>
+      </view>
+      <view class="bus_word">
+        <view class="left">上海市</view>
+        <view class="right">广州市</view>
+      </view>
+    </view>
+      
+  </view>
+    
+    
+  <view class="logists_step_container" hover-class="none" hover-stop-propagation="false">
+    <view class="logists_header" hover-class="none" hover-stop-propagation="false">
+      <view class="icon" >
+        <image src="/assets/images/order/addr.png"></image>
+      </view>
+      <view class="title" >物流状态</view>
+    </view>
+      
+    <logists-step steps="{{logisticStep}}" activeStep="1"></logists-step>
+  </view>
+</view>
+  
+
+
+

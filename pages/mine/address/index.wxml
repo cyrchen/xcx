@@ -1,0 +1,16 @@
+<!--pages/mine/address/index.wxml-->
+<view class="address" wx:for='123'>
+     <view class="header">
+         <text class="name">李欣甜</text>
+        <text class="cellphone">17717249702</text>
+     </view>
+     <view class="address_detail">
+        <view class="tacitly" wx:if='{{index == 0}}'>默认</view>
+        <text class="content">上海市浦东新区东方路710号汤臣金融大厦24楼</text>
+     </view>
+    <view class="edit">编辑</view>
+      
+</view>
+<fixed-bottom >
+    <button class="fixed_blue_butn clear_butn" bindtap="toAddressPage">新增收货地址</button>
+</fixed-bottom>

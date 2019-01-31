@@ -1,0 +1,21 @@
+<view class="page_container">
+
+
+    <view class="swiper-list-page">
+        <view class="naver_bar">
+            <view wx:for='{{navList}}' wx:key='{{index}}'
+                  class='{{index == naverBarCurrent? "normal_item_active":""}}'
+                  data-id='{{index}}' bindtap='bindTab'>{{item.name}}</view>
+        </view>
+        <view class="naver_content">
+            <swiper  current='{{naverBarCurrent}}'  bindchange='changeNavBarIndex'>
+                <swiper-item  wx:for='{{navList}}' wx:key='{{index}}' wx:for-item='nav'>
+                    <scroll-view  scroll-y  lower-threshold='50'  data-index='{{index}}'  bindscrolltolower='scrollBottomToLoadMore'>
+                        <view wx:for="123145452">{{index}}</view>
+                    </scroll-view>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+
+</view>

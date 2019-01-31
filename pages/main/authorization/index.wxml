@@ -1,0 +1,18 @@
+
+<view class="page-container">
+  <view class="page_top" hover-class="none" hover-stop-propagation="false">
+    <view class="logo">
+      <image src="/assets/images/global/logo.png" />
+    </view>
+    <view class="app_name" hover-class="none" hover-stop-propagation="false">
+      彩虹基因
+    </view>
+  </view>
+    
+  <view class="page_bottom" hover-class="none" hover-stop-propagation="false">
+    <view class="main_tip">申请授权以下信息</view>
+    <view class="sub_tip">· 获得您的公开信息（昵称、头像等）</view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="clear_butn main_butn">授权</button>
+  </view>
+    
+</view>

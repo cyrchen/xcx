@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "确认订单",
+  "usingComponents": {
+    "van-panel": "/src/component/zan-ui/panel/index",
+    "van-popup": "/src/component/zan-ui/popup/index",
+    "van-notify": "/src/component/zan-ui/notify/index",
+    "van-submit-bar": "/src/component/zan-ui/submit-bar/index",
+    "van-icon": "/src/component/zan-ui/icon/index"
+  }
+}

@@ -1,0 +1,55 @@
+<!-- 取件信息模块开始 -->
+<view class="intermediate">
+    <!-- 中间模块开始 -->
+    <view class="intermediate-center">
+        <!-- 收件人开始 -->
+        <view class="recipients clearfix">
+            <view class="recipientsname">收件人:</view>
+            <view class="placerecipients">
+                <input type="text" placeholder="请输入收件人" class="nameinput"></input>
+            </view>
+        </view>
+        <!-- 收件人结束 -->
+        <!-- 手机号开始 -->
+        <view class="recipients clearfix">
+            <view class="recipientsname">手机号:</view>
+            <view class="placerecipients">
+                <input type="text" placeholder="11位手机号" class="nameinput"></input>
+            </view>
+        </view>
+        <!-- 手机号结束 -->
+        <!-- 所在城市开始 -->
+        <view class="recipients clearfix">
+            <view class="recipientsname">所在城市:</view>
+            <view class="placerecipients">省/市/区</view>
+        </view>
+        <!-- 所在城市结束 -->
+        <!-- 详细地址开始 -->
+        <view class="recipients clearfix">
+            <view class="recipientsname">详细地址:</view>
+            <view class="placerecipients">
+                <input type="text" placeholder="详细地址" class="nameinput"></input>
+            </view>
+        </view>
+        <!-- 详细地址结束 -->
+        <!-- 预约时间开始 -->
+        <view class="recipients clearfix appointment">
+            <view class="recipientsname">预约时间:</view>
+            <view class="placerecipients">
+                <view class="placerecipients_img">
+                    <image class="rightdianimg" src="/assets/images/global/arrow-right.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" bindtap="choosetime" />
+                </view>
+            </view>
+        </view>
+        <!-- 预约时间结束 -->
+    </view>
+    <!-- 中间模块结束 -->
+</view>
+<!-- 取件信息模块结束 -->
+<!-- 提示信息模块开始 -->
+<view class="reminderpop">快递会在预约时间内上门取件，请包装好您的采集盒哦~</view>
+<!-- 提示信息模块结束 -->
+<!-- 下单按钮开始 -->
+<button class="overbooking" bindtap="toReportDetail">下单</button>
+<!-- 下单按钮结束 -->
+<van-popup show="{{ choosetime }}" position="botton" overlay="{{ false }}" bind:close="onClose" close-on-click-overlay="{{true}}" safe-area-inset-bottom="{{true}}"></van-popup>

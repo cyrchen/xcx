@@ -1,0 +1,9 @@
+<view class="page-container" > 
+  <list-none-page 
+  wx:if='{{true}}'
+  custom_container_class="custom_container_class"
+  custom_icon_class="custom_icon_class"
+  tipIcon="/assets/images/global/no-ticket.png" 
+  tipWord="暂无优惠券"
+  ></list-none-page>
+</view>

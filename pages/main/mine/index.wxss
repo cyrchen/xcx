@@ -1,0 +1,1 @@
+.page-header{height:260rpx;display:flex;flex-direction:column;align-items:center;color:#ffffff;background:#56A9FE;justify-content:center}.page-header .icon{width:140rpx;height:140rpx;border-radius:50%;background:#eeeeee;overflow:hidden}.page-header .icon image{width:100%;height:100%}.page-header .name{font-size:32rpx;line-height:1;margin-top:17rpx}.cell-group{background:#ffffff}

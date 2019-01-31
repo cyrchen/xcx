@@ -1,0 +1,20 @@
+
+<view class="page-container" hover-class="none" hover-stop-propagation="false">
+  <view class="radar_container">
+
+  <ec-canvas 
+  id="mychart-dom-graph" 
+  canvas-id="mychart-graph" 
+  ec="{{ ec }}"
+  bind:init="echartInit"></ec-canvas>
+
+  </view>
+
+  <ability-card skillItem="{{skillLanguage}}"></ability-card>
+  <ability-card skillItem="{{skillBody}}"></ability-card>
+  <ability-card skillItem="{{skillMusic}}"></ability-card>
+  <ability-card skillItem="{{skillMusic}}"></ability-card>
+  <ability-card skillItem="{{skillMusic}}"></ability-card>
+  <ability-card skillItem="{{skillMusic}}"></ability-card>
+</view>
+  

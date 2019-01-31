@@ -1,0 +1,42 @@
+
+
+<view class="page-contaienr" hover-class="none" hover-stop-propagation="false">
+  <view class="page_title" hover-class="none" hover-stop-propagation="false">
+    华夏源儿童天赋基因检测服务协议
+  </view>
+  <view class="page_content" hover-class="none" hover-stop-propagation="false">
+    <text> 
+                            接受服务
+“华夏源儿童天赋基因检测”软件及相关服务由华夏源（上海）基因工程有限公司提供，以下统称为“华夏源”或“我们”。在使用华夏源儿童天赋基因检测产品之前，请您务必仔细阅读并充分理解本《华夏源儿童天赋基因检测用户服务协议》（以下简称“本协议”），了解自身在使用华夏源产品过程中的权利和限制，以确认是否继续购买使用我们的产品。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、法律适用和争议解决条款。如您不接受本协议任何内容，请勿购买使用华夏源基因产品。如您在阅读协议时遇到任何疑问，欢迎联系华夏源孕宝博士客户服务中心咨询，联系方式可在网站“联系我们”页面获取。
+
+关键定义
+“华夏源基因”：即为华夏源（上海）基因工程有限公司，同时包括整个实验、服务、研发相关团队。
+“服务”：华夏源基因利用您提供的唾液样本提取其中的遗传信息载体并进行分析的，通过个人基因检测获得基因检测报告。
+“产品升级”：检测项目调整和优化。
+“华夏源基因研究/调查” ：指华夏源基因研发团队及相关专家主导旨在相关领域学术期刊上发表文章的科学研究。
+“个人信息”：创建及注册华夏源基因账号及参加相关调研时时可能需要填写的信息（如姓名、性别、出生年月、祖籍等）。
+“遗传数据”：你的基因型（基因组特定位点的ATCG）。
+
+服务范围
+除非有特别声明，否则以任何形式使用华夏源基因服务的客户都受本服务条款的约束，包括但不限于:
+1. 提交唾液样本用于DNA的提取和分析；
+2. 在孕宝博士微信公众号和APP上传您的个人信息；
+2. 在孕宝博士微信公众号和APP上传您的个人信息；
+除非有特别声明，否则以任何形式使用华夏源基因服务的客户都受本服务条款的约束，包括但不限于:
+除非有特别声明，否则以任何形式使用华夏源基因服务的客户都受
+                        </text>
+  </view>
+    
+</view>
+
+<view class="fix_container" hover-class="none" hover-stop-propagation="false">
+    <view class="select-area" catchtap="changeAgreeProtocol">
+      <image wx:if='{{agreeProtocol}}' src="/assets/images/global/checked.png" />
+      <image wx:else src="/assets/images/global/no-checked.png" />
+      <view >我同意《华夏源儿童天赋基因检测服务协议》</view>
+    </view>
+      
+    <button disabled="{{!agreeProtocol}}" class="clear_butn pink_butn" bindtap="tobindSuccess">同意</button>
+  </view>
+  
+  

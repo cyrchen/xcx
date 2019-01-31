@@ -1,0 +1,22 @@
+<view class='custom_cell   custom_container_class'
+  data-link="{{linkUrl}}" bindtap='_tolinkUrl'>
+  <view class="cell_icon">
+    <image wx:if='{{icon}}' class='textLink_left_icon custom_icon_class'
+        src='{{icon}}'></image>
+  </view>
+  <view class="{{borderType}} cell_content" >
+    <view class="title" >
+      <text  style='font-size: {{titleFontSize}}rpx;'>{{title}}</text>
+    </view>
+    <view class="cell-right"  wx:if='{{hasRight}}'>
+      <view wx:if='{{subTitle}}'
+          style='font-size: {{subTitleFontSize}}rpx;'>{{subTitle}}</view>
+      <view  class='textLink_right_text'>
+        <slot></slot>
+      </view>
+      <view id='{{hasRightIcon}}' wx:if='{{hasRightIcon}}' class='textLink_right_icon iconfont icon-right'></view>
+    </view>
+  </view>
+    
+  
+</view>

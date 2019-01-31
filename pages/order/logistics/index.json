@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "物流详情",
+  "usingComponents": {
+    "logists-step": "/src/component/custom/logists-step/index",
+    "van-progress": "/src/component/zan-ui/progress/index"
+  }
+}

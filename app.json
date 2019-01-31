@@ -1,0 +1,71 @@
+{
+  "pages":[
+    
+    "pages/report/poster/index",
+    "pages/report/poster-detail/index",
+    "pages/report/report-datas-unscramble/index",
+    "pages/report/report-datas/index",
+    "pages/report/report/index",
+    "pages/report/report-detail/index",
+    "pages/main/main/index",
+    "pages/main/mine/index",
+    "pages/main/index/index",
+    "pages/main/authorization/index",
+    "pages/box/box-logistics-from/index",
+    "pages/box/scan-code/index",
+    "pages/box/box/index",
+    "pages/box/box-userinfo-from/index",
+    "pages/box/bind-success/index",
+    "pages/box/box-userinfo/index",
+    "pages/mine/abouts-protocol-service/index",
+    "pages/mine/address/index",
+    "pages/mine/address-edit/index",
+    "pages/mine/contact/index",
+    "pages/mine/discount/index",
+    "pages/mine/abouts-protocol/index",
+    "pages/order/good-detail/index",
+    "pages/order/logistics/index",
+    "pages/order/pre-order/index",
+    "pages/order/order-detail/index",
+    "pages/order/pay-result/index",
+    "pages/order/order/index",
+    "pages/main/swiper-list-page/index",
+    "pages/main/test/index"
+
+  ],
+  "subpackages": [
+    {
+      "root": "pages/subpage1",
+      "name": "test1",
+      "pages": [
+        "test1/index"
+      ]
+    }
+  ],
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#56A9FE",
+    "color": "#DCDDE0",
+    "list": [
+      {
+        "pagePath": "pages/main/main/index",
+        "text": "首页",
+        "iconPath": "assets/images/tabbar/main.png",
+        "selectedIconPath": "assets/images/tabbar/main-select.png"
+      },
+      {
+        "pagePath": "pages/main/mine/index",
+        "text": "我的",
+        "iconPath": "assets/images/tabbar/mine.png",
+        "selectedIconPath": "assets/images/tabbar/mine-select.png"
+      }
+    ]
+  },
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "彩虹基因",
+    "navigationBarTextStyle":"black"
+  }
+}

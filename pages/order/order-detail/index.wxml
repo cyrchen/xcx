@@ -1,0 +1,58 @@
+<view class='page-container'>
+  <!-- 地址栏 -->
+  <view class='address_choose_box'>
+    <view class='address_info'>
+      <view class='address_left'>
+        <view class='address_name'>
+          金燕
+          <text>15554655654</text>
+        </view>
+        <view class='address_sub'>上海市爱时候覅花生防护按时交话费</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单商品 -->
+  <view class="pre_order_goods">
+    <view class="good_item" hover-class="none" hover-stop-propagation="false">
+      <view class="good_icon">
+        <image src="/assets/images/global/good_demo.png" mode='aspectFill' />
+      </view>
+      <view class="good_infos" hover-stop-propagation="false">
+        <view class="good_name" >奥术大见爱上发挥</view>
+        <view class="good_price" >￥999</view>
+        <view class="good_num" >x1</view>
+      </view>
+    </view>
+  </view>
+
+  
+
+  <!-- 订单提醒 -->
+  <view class="order_tips">
+    <view class="tips_item" >
+      <view>订单编号： <text>1000000000</text></view>
+    </view>
+    <view class="tips_item" >
+      <view>下单时间： <text>2018-01-23</text></view>
+    </view>
+    <view class="tips_item" >
+      <view>商品单价： <text>￥999</text></view>
+    </view>
+    <view class="tips_item" >
+      <view>商品数量：<text>1</text></view>
+    </view>
+    <view class="tips_item" >
+      <view>商品总价：<text>￥999</text></view>
+    </view>
+    <view class="tips_item" >
+      <view>实付款：<text class="price">￥999</text></view>
+    </view>
+    
+      
+  </view>
+</view>    
+
+<fixed-bottom >
+    <button class="fixed_blue_butn clear_butn" bindtap="toAddressPage">去付款</button>
+</fixed-bottom>

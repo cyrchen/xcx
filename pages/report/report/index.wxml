@@ -1,0 +1,68 @@
+<view class="page-container" > 
+  <list-none-page 
+  wx:if='{{false}}'
+  custom_container_class="custom_container_class"
+  custom_icon_class="custom_icon_class"
+  tipIcon="/assets/images/global/no-report.png" 
+  tipWord="当前还没有购买潜能基因检测噢"
+  butnText="去购买"
+  butnLink="/pages/order/good-detail/index"
+  ></list-none-page>
+  <view wx:else class="list-page" hover-class="none" hover-stop-propagation="false">
+    <view class="list-page-bg" hover-class="none" hover-stop-propagation="false">
+      <image  src="https://gene-mini.oss-cn-shanghai.aliyuncs.com/prod/app-online-images/report-bg.png"
+       mode="aspectFill" />
+    </view>
+    <view class="list-container" hover-class="none" hover-stop-propagation="false">
+      <view class="list_item" wx:for="123224" data-id='{{}}' bindtap="toReportDetail">
+        <view class="list_item_content" hover-class="none" hover-stop-propagation="false">
+          <view class="header">
+            <view class="title">儿童潜能基因检测报告</view>
+            <view class="sub_title">查看详细进度></view>
+          </view>
+          <view class="butns_container" hover-class="none" hover-stop-propagation="false">
+            <view class="butn">
+              <block wx:if="{{test > 2}}">
+                <image class="icon_transport" src="/assets/images/report/transport-active.png" />
+                <view class="transport_active_text">运输中</view>
+              </block>
+              <block wx:elif='{{test > 1}}'>
+                <image class="icon_transport" src="/assets/images/report/transport.png" />
+                <view>运输中</view>
+              </block>
+              <block wx:else>
+                <image class="icon_lock" src="/assets/images/report/lock.png" />
+              </block>
+            </view>
+            <view class="butn">
+              <block wx:if="{{test > 4}}">
+                <image class="icon_detection" src="/assets/images/report/detection-active.png" />
+                <view class="detection_active_text">检测中</view>
+              </block>
+              <block wx:elif='{{test > 3}}'>
+                <image class="icon_detection" src="/assets/images/report/detection.png" />
+                <view>检测中</view>
+              </block>
+              <block wx:else>
+                <image class="icon_lock" src="/assets/images/report/lock.png" />
+              </block>
+            </view>
+            <view class="butn">
+              <block wx:if='{{test > 5}}'>
+                <image class="icon_report" src="/assets/images/report/report-active.png" />
+                <view class="report_active_text">报告已生成</view>
+              </block>
+              <block wx:else>
+                <image class="icon_lock" src="/assets/images/report/lock.png" />
+              </block>
+            </view>
+          </view>
+              
+        </view>
+          
+      </view>
+    </view>
+      
+  </view>
+    
+</view>

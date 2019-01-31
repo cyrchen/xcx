@@ -1,0 +1,9 @@
+<view class="list-no-data-class custom_container_class" >
+  <view class="tip_icon custom_icon_class">
+    <image  src="{{tipIcon}}" />
+  </view>
+  <view class="tip_message">{{tipWord}}</view>
+  <view class="butns_container" wx:if='{{butnLink}}'>
+    <button class="clear_butn main_butn" bindtap="_toLinkPage">{{butnText}}</button>
+  </view>
+</view>

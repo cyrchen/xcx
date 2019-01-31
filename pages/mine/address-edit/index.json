@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "编辑收货地址",
+  "usingComponents": {
+    "van-popup": "/src/component/zan-ui/popup/index",
+    "van-area": "/src/component/zan-ui/area/index",
+    "van-dialog": "/src/component/zan-ui/dialog/index"
+  }
+}

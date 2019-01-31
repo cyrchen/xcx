@@ -1,0 +1,7 @@
+
+
+<view class="{{isIphoneX?'isIphoneXBottom':''}} fix_container" hover-class="none" hover-stop-propagation="false">
+     
+    <slot></slot>
+</view>
+  

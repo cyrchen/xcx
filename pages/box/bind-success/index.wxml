@@ -1,0 +1,23 @@
+
+
+<view class="page-container">
+  <view class="success_icon">
+    <image src="/assets/images/box/bind_success.png" />
+  </view>
+  <view class="page_title">恭喜，绑定成功!</view>
+  <view class="page_tip">
+    <view class="left">
+      <image src="/assets/images/box/small.png" />
+    </view>
+    <view class="right">
+      亲爱的，绑定好的采集盒需要回寄到我们的实验室，您采集完需要的唾液后可直接线上点击回寄，订单和报告页面均可实时查看您的物流状态
+    </view>
+  </view>
+  <view class="butn_container">
+    <button class="clear_butn main_butn" bindtap="toLogisticsForm">立即回寄</button>
+    <button class="clear_butn sub_butn" bindtap="toReportDetail">稍后再说</button>
+  </view>
+    
+</view>
+
+

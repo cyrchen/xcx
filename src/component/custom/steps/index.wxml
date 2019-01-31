@@ -1,0 +1,30 @@
+
+
+<view class="steps_container" >
+  <view class="step" wx:for="{{steps}}" wx:for-item="step">
+    <view wx:if='{{activeStep>index}}' class="active_line" >
+      <icon class="" type="success" size="30rpx" color="#27C772"></icon>
+    </view>
+    <view wx:else class="default_line" >
+      <view class="default_point" ></view>
+    </view>
+    <view class="step_content">
+      <view class="header" >
+        <view wx:if='{{activeStep>index}}' class="active_view" >
+          <view class="">{{step.title}}</view>
+          <view class="active_butn" data-link="{{step.butnLink}}" catchtap="_toLinkPage" wx:if="{{step.butnText}}">{{step.butnText}}</view>
+        </view>
+        <view class="normal_view" wx:else>
+          {{step.title}}
+        </view>
+      </view>
+      <view class="body">{{step.tip}}</view>
+        
+        
+    </view>
+  </view>
+    
+  
+  
+</view>
+  

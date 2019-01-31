@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "fixed-bottom":"/src/component/custom/fixedBottom/index",
+    "van-button": "/src/component/zan-ui/button/index",
+    "van-popup": "/src/component/zan-ui/popup/index",
+    "van-icon": "/src/component/zan-ui/icon/index",
+    "van-stepper": "/src/component/zan-ui/stepper/index",
+    "van-notify": "/src/component/zan-ui/notify/index"
+  }
+}

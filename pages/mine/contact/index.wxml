@@ -1,0 +1,40 @@
+
+<view class="page-container">
+  <view class="page_top" hover-class="none" hover-stop-propagation="false">
+     <view class="logo">
+      <image src="/assets/images/global/logo.png" />
+    </view>
+
+    <view bindtap="showActionSheet" class="contact-number-container" hover-class="none" hover-stop-propagation="false">
+      <image src="/assets/images/my/my-content.png" />
+      <view class="" hover-class="none" hover-stop-propagation="false">
+        客服电话：021-88888888
+      </view>
+    </view>
+
+    <view class="contact-codes" hover-class="none" hover-stop-propagation="false">
+      <view class="" > 
+      <image src="/assets/images/global/wechat-code.png" />
+      </view>
+      <view class="" > 
+      <image src="/assets/images/global/wechat-code.png" />
+      </view>
+    </view>
+  </view>
+    
+  <view class="page_bottom" hover-class="none" hover-stop-propagation="false">
+    <view data-page="/pages/mine/abouts-protocol/index" catchtap="toLinkOPage">《样本保存授权同意书》</view>
+    <view >《研究之情同意书》</view>
+    <view >《服务协议》</view>
+  </view>
+    
+</view>
+
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  cancel-text="取消"
+  bind:close="onClose"
+  bind:select="onSelect"
+  bind:cancel="calcle"
+/>

@@ -1,0 +1,46 @@
+
+<wxs module="computed">
+  var getAllLevel = function (list,level){
+    var result = true;
+    for(var i = 0; i<list.length; i++){
+      if(list[i].level != level){
+        result = false;
+        break;
+      }
+    }
+    return result;
+  }
+  module.exports = { getAllLevel : getAllLevel }
+</wxs>
+
+<view class="skill_item_card">
+  <view class="header">
+    <view class="left">
+      <view class="icon">
+        <image src="{{skillItem.icon}}" />
+      </view>
+      <view class="title">{{skillItem.title}}</view>
+    </view>
+    <view class="butn" style="background:#FFBA7D;" >查看能力解读</view>
+  </view>
+  <view class="content">
+    <view class="content_word" wx:if="{{showCardMore}}">
+      <text wx:for='{{skillItem.content}}'>{{item.name}}<text space="ensp" wx:if='{{index != skillItem.content.length-1}}'> | </text></text>
+    </view>
+    <view class="content_image" wx:else>
+      <view class="content_image_item" wx:for='{{skillItem.content}}'>
+        <view class="item_icon">
+          <image src="/assets/images/report/score_{{item.level}}.png" />
+        </view>
+        <view class="item_text">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="loadMore" bindtap="_showCardMore">
+    <view class="">共4项</view>
+    <image src="/assets/images/report/{{showCardMore?'arrow-down':'arrow-up'}}.png" />
+  </view>
+  <image class="corner_image" wx:if='{{computed.getAllLevel(skillItem.content,3)}}' src="/assets/images/report/brilliant_tag.png" />
+</view>
+
